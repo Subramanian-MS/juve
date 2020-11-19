@@ -16,7 +16,7 @@ background-color:darkgrey}
   width: 105%;
   align-content: center;
 }
-#transferIn td, #customers th {
+#transferIn td, #transferIn th {
   border: 1px solid #ddd;
   padding: 5px;
   text-align: center;
@@ -64,6 +64,30 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
+form{
+  position: relative;
+  width: 70%;
+  text-align: right;
+}
+
+label{
+ 
+  width: 30%;
+  position: absolute;
+  left: 250px;
+  text-align: left;
+  margin-right: 30px;
+}
+input[type=submit] {
+  position: relative;
+  width: 20%;
+  text-align: center;
+  margin-right: 30px;
+  font-size: large;
+  background-color: peachpuff
+}
+
+
 </style>
 
 <body>
@@ -75,7 +99,7 @@ img {vertical-align: middle;}
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM NEWS</a>
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GALLERY</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
     
     
   </div>
@@ -85,22 +109,22 @@ img {vertical-align: middle;}
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEAM NEWS</a>
   <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About US</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT US</a>
+  
 </div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <br>
 <div id="logo" style="display:block;margin-left:Auto;margin-right:Auto;width:400px;">
-    <img src="C:\Users\Dell\Desktop\juve\images\logo.jpg">
+    <img src="images/logo.jpg">
 </div>
 <br>
 <br>
   <!-- Automatic Slideshow Images -->
   <div class="slideshow-container w3-center">
     <div class="mySlides1 ">
-    <img src="https://github.com/Subramanian-MS/juve/blob/main/images/arthur.jpg" style="width:650px">
+    <img src="images/pirlo1.jpg" style="width:650px">
     <div class="w3-display-bottomleft w3-text-white w3-padding-32 w3-hide-small" style="width:650px">
           <h3><b>Andrea Pirlo - COACH</b></h3>
     </div>
@@ -112,7 +136,7 @@ img {vertical-align: middle;}
     </div>
   </div>
   <div class="mySlides1">
-    <img src="https://github.com/Subramanian-MS/juve/blob/main/images/arthur.jpg">
+    <img src="C:\Users\Dell\Desktop\juve\images\cr7.jpg">
     <div class="w3-display-bottomleft w3-text-white w3-padding-32 w3-hide-small" style="width:750px">
       <h3><b>Cristiano Ronaldo - KEY PLAYER</b></h3>    
     </div>
@@ -190,7 +214,7 @@ img {vertical-align: middle;}
 </div>
 
 <div class="mySlides2">
-<img src="https://github.com/Subramanian-MS/juve/blob/main/images/arthur.jpg" style="width:600px">
+<img src="C:\Users\Dell\Desktop\juve\images\arthur.jpg" style="width:600px">
 </div>
   
   <a class="prev" style="right:600px;"onclick="plusSlides(-1, 1)">&#10094;</a>
@@ -200,7 +224,7 @@ img {vertical-align: middle;}
 <br>
 <h1 style="text-align:center"> <strong><em>Juventus Squad 2020</em></strong></h1>
 <div class="post-entry" >
-  <table  style="text-align:center;margin-left: 250px;"width="1000px" cellspacing="0" cellpadding="0">
+  <table  style="text-align:left;margin-left: 250px;"width="1000px" cellspacing="0" cellpadding="0">
   <tbody>
   <tr>
   <td width="81" height="30">
@@ -211,7 +235,7 @@ img {vertical-align: middle;}
   </td>
   <td width="188" height="30">
   <h3>DOB</h3>
-  </td>
+  </td>   
   <td width="143" height="30">
   <h3>Nationality</h3>
   </td>
@@ -538,45 +562,38 @@ img {vertical-align: middle;}
     </video>
     </div>
 
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
-
+  
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    
-    <div class="w3-wide w3-center">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
+    <h2 class="w3-wide w3-center"><strong>Contact Details</strong></h2>
+      <div class="w3-col m6 w3-large w3-margin-bottom" style="margin-left: 300px;">
         <i class="fa fa-map-marker" style="width:30px"></i> Palakkad kerala,india<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone :+917909202355<br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: juvefc@mail.com<br>
       </div>
-      
-    </div>
-  </div>
-  
+    
+  <div class="w3-container w3center">
+    <h2 class="w3-wide w3-center"style="margin-left: 80px;"><strong>FAN ? Send a note!</strong></h2>
+    <form action="" method="post">
+      <label> <strong>Name</strong> </label>
+      <input type="text"/>
+      <br>
+      <br>
+      <label><strong>Email</strong> </label>
+      <input type="email"/>
+      <br>
+      <br>
+      <label> <strong>Note</strong> </label>
+      <input type="text" maxlength= "500" />
+      <br>
+      <br>
+      <input type="submit" value="submit" class="sub"/>
+      </form>
+</div>
+</div>
+</div>
 <!-- End Page Content -->
 </div>
-
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
